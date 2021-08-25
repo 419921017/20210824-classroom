@@ -13,11 +13,12 @@ module.exports = {
   },
   css: {
     loaderOptions: {
+      css: {},
       postcss: {
         plugins: [
           require('postcss-plugin-px2rem')({
-            rootValue: 37.5, // 37.5rem => 375
-            exclude: /node_modules/,
+            rootValue: 37.5,
+            exclude: /node_module/,
           }),
         ],
       },

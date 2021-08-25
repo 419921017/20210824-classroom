@@ -1,30 +1,32 @@
 {
-  "name": "20210824-classromm",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "lib-flexible": "^0.3.2",
-    "normalize.css": "^8.0.1",
-    "postcss-plugin-px2rem": "^0.8.1",
-    "vant": "^2.12.26",
-    "vue": "^2.6.11",
-    "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "sass": "^1.32.7",
-    "sass-loader": "^11.0.1",
-    "style-resources-loader": "^1.4.1",
-    "vue-cli-plugin-style-resources-loader": "~0.1.5",
-    "vue-template-compiler": "^2.6.11"
-  }
+    "name": "20210824-classromm",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "core-js": "^3.8.3",
+        "lib-flexible": "^0.3.2",
+        "normalize.css": "^8.0.1",
+        "postcss-loader": "^3.1.1",
+        "postcss-plugin-px2rem": "^0.8.1",
+        "vant": "^2.12.26",
+        "vue": "^2.6.11",
+        "vue-router": "^3.5.1",
+        "vuex": "^3.6.2"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~5.0.0",
+        "@vue/cli-plugin-router": "~5.0.0",
+        "@vue/cli-plugin-vuex": "~5.0.0",
+        "@vue/cli-service": "~5.0.0",
+        "sass": "^1.32.7",
+        "sass-loader": "^10.1.1",
+        "style-resources-loader": "^1.4.1",
+        "vue-cli-plugin-style-resources-loader": "~0.1.5",
+        "vue-template-compiler": "^2.6.11"
+    }
 }

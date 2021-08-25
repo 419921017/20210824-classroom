@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 
 import 'lib-flexible';
-import 'normalize.css';
+import 'normalize.css/normalize.css';
 
 import Vant from 'vant';
 import 'vant/lib/index.css';

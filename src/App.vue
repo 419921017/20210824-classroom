@@ -20,6 +20,12 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  width: 375px;
+  width: 100%;
+  .van-dropdown-menu__bar {
+    background: $background;
+    .van-dropdown-menu__title {
+      color: $color;
+    }
+  }
 }
 </style>
