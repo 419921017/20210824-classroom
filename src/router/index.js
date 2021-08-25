@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Home from '@/views/home';
 import loadable from '@/util/loadable';
+import routerHooks from './routerHooks';
 
 Vue.use(VueRouter);
 
@@ -29,5 +30,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+
+Object.values(routerHooks).forEach((hook) => router.beforeEach(hook));
 
 export default router;

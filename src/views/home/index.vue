@@ -1,6 +1,17 @@
 <template>
   <div class="home">
-    <HomeHeader v-model="currentCategory"></HomeHeader>{{currentCategory}}
+    <HomeHeader v-model="currentCategory"></HomeHeader>
+    <van-swipe
+      class="my-swipe"
+      :autoplay="3000"
+      indicator-color="white"
+    >
+      <van-swipe-item>1</van-swipe-item>
+      <van-swipe-item>2</van-swipe-item>
+      <van-swipe-item>3</van-swipe-item>
+      <van-swipe-item>4</van-swipe-item>
+    </van-swipe>
+
   </div>
 </template>
 
@@ -14,7 +25,7 @@ let res = createNamespacedHelpers('home')
 
 console.log('res', res);
 
-let { mapState, mapMutations } = res
+let { mapState, mapMutations, mapActions } = res
 
 
 export default {
@@ -22,7 +33,7 @@ export default {
     HomeHeader
   },
   computed: {
-    ...mapState(['category']),
+    ...mapState(['category', 'slides']),
     currentCategory: {
       get() {
         return this.category
@@ -38,10 +49,15 @@ export default {
     }
   },
   methods: {
-    ...mapMutations([Types.SET_CATEGORY])
+    ...mapMutations([Types.SET_CATEGORY]),
+    ...mapActions([Types.SET_SLIDES])
   },
   mounted() {
-    console.log(this);
+    // console.log(this);
+    // this[Types.SET_SLIDES]()
+    if (this.slides.length == 0) {
+      this[Types.SET_SLIDES]()
+    }
   }
 }
 </script>
@@ -49,5 +65,12 @@ export default {
 <style lang="scss">
 .home {
   width: 100%;
+  .my-swipe .van-swipe-item {
+    color: #fff;
+    font-size: 20px;
+    line-height: 150px;
+    text-align: center;
+    background-color: #39a9ed;
+  }
 }
 </style>
