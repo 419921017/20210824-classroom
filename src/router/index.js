@@ -12,6 +12,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
+    meta: {
+      needLogin: true,
+    },
   },
   {
     path: '/lesson',
@@ -22,6 +25,16 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: loadable(() => import('@/views/profile')),
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: loadable(() => import('@/views/login')),
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: loadable(() => import('@/views/login')),
   },
 ];
 

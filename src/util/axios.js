@@ -16,7 +16,10 @@ class HttpRequest {
       if (Object.keys(this.queue).length == 0) {
         // loading = true
       }
-
+      let token = localStorage.getItem('token');
+      if (token) {
+        config.headers.authorization = token;
+      }
       this.queue[url] = true;
       // 取消请求
       let CancelToken = axios.CancelToken;
